@@ -1,0 +1,135 @@
+.game {
+  display: grid;
+  position: relative;
+  width: 480px;
+  height: 640px;
+  margin: 0 auto;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 2fr 8fr 1fr;
+  background-color: var(--white);
+  grid-template-areas:
+    "header mode"
+    "rows colors"
+    "footer footer";
+}
+
+.mode {
+  grid-area: mode;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--ceal);
+  border-bottom: 1px solid var(--white);
+  color: var(--white);
+  z-index: 200;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  font-size: 2.5rem;
+  background-color: var(--ceal);
+  border-bottom: 1px solid var(--white);
+  color: var(--white);
+  z-index: 200;
+}
+
+.footer {
+  grid-area: footer;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;;
+  align-items: center;
+  background-color: var(--ceal);
+  border-top: 1px solid var(--white);
+  color: var(--white);
+  z-index: 200;
+}
+
+.rows {
+  grid-area: rows;
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  border-right: 2px solid var(--white);
+  background-color: var(--ceal);
+  color: var(--white);
+  padding: 1rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 70% 25%;
+  gap: 2%;
+  height: 48px;
+  margin: 6px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.row.active {
+  background-color: var(--blue);
+  box-shadow: 4px 4px 10px var(--white);
+}
+
+.colors {
+  grid-area: colors;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  background: var(--ceal);
+  color: var(--white);
+  padding: 0.75rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  width: 40px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle.active {
+  border: 3px solid var(--black);
+  box-shadow: 4px 4px 10px gray;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.guess {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 6px;
+}
+
+.hint {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 4px;
+}
+
+.game-end {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--light);
+  opacity: 0.7;
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  z-index: 100;
+}
