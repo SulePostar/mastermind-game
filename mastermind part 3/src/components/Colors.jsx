@@ -1,11 +1,14 @@
-import { useState } from 'react';
 import Circle from './Circle';
 import { COLORS } from '@src/config';
+import { useSelector, useDispatch } from 'react-redux';
+import { setActiveColor } from '@src/store/gameSlice';
 
 const Colors = () => {
 
-  const [activeColor, setActiveColor] = useState(null);
-  const onSelect = color => setActiveColor(color);
+  const {activeColor} = useSelector(state => state.game);
+  const dispatch = useDispatch();
+
+  const onSelect = color => dispatch(setActiveColor(color));
   
   return (
     <div className='colors'>

@@ -1,11 +1,11 @@
 import Check from './Check';
 import NewGame from './NewGame';
 
-const Footer = ({ onClick, onReset }) => {
+const Footer = () => {
   return (
     <div className="footer">
-      <Check onClick={onClick} />
-      <NewGame onClick={onReset} />
+      <Check />
+      <NewGame />
     </div>
   )
 }

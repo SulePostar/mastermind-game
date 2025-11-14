@@ -1,23 +1,29 @@
-import '@assets/App.css';
+import '@styles/App.css';
 import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Header, Mode, Footer, Rows, Colors, GameEnd } from '@components';
+import { setGameStatus } from '@store/gameSlice';
 
 function App() {
 
-  const [gameStatus, setGameStatus] = useState('ongoing');
+  const dispatch = useDispatch();
+  const { gameStatus } = useSelector((state) => state.game);
+  const game = useSelector((state) => state.game);
+  console.log(game);
+  
   const [activeRow, setActiveRow] = useState(0);
 
   const advance = () => {
     if(activeRow < 9) {
       setActiveRow(prev => prev + 1);
     } else {
-      setGameStatus('lost');
+      dispatch(setGameStatus('lost'));
     }
   }
 
   const reset = () => {
     setActiveRow(0);
-    setGameStatus('ongoing');
+    dispatch(setGameStatus('ongoing'));
   }
 
   return (

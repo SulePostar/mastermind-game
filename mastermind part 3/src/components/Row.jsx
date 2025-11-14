@@ -4,7 +4,7 @@ import Hint from "./Hint";
 const Row = ({ active }) => {
   return (
     <div className={`row ${active ? "active" : ""}`}>
-      <Guess />
+      <Guess active={active} />
       <Hint />
     </div>
   )

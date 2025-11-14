@@ -16,6 +16,13 @@ body {
   padding: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  border: 3px solid var(--black);
+  border-radius: 50%;
+}
+
 .white { background-color: #fdfdfd; } /* 0 */
 .black { background-color: #1a1b1c; } /* 1 */
 .blue { background-color: #1890ff; } /* 2 */

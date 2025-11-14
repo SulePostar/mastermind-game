@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useSelector } from "react-redux";
 import Row from "./Row";
 
-const Rows = ({ activeRow }) => {
+const Rows = () => {
+  
+  const activeRow = useSelector(state => state.game.activeRow);
 
   return (
     <div className='rows'>
