@@ -1,0 +1,29 @@
+:root {
+  font-family: Oxanium, sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
+
+  --black: #1d1e1f;
+  --white: #f0f2f4;
+  --gray: #bfc1c3;
+  --light: #af9c55;
+  --dark: #847214;
+  --beige: #dacbb4;
+}
+
+.white { background-color: #fdfdfd; }
+.black { background-color: #1a1b1c; }
+.blue { background-color: #1890ff; }
+.brown { background-color: #994422; }
+.green { background-color: #1da57a; }
+.orange { background-color: #f39c12; }
+.red { background-color: #f5222d; }
+.purple { background-color: #8e44ad; }
+.transparent { background-color: rgba(0, 0, 0, 0.15); }
+
+
+/* .filter: invert(83%) sepia(43%) saturate(6691%) hue-rotate(316deg) brightness(87%) contrast(80%);
+.filter: invert(83%) sepia(43%) saturate(6691%) hue-rotate(316deg) brightness(87%) contrast(80%);
+.filter: invert(83%) sepia(43%) saturate(6691%) hue-rotate(316deg) brightness(87%) contrast(80%);
+.filter: invert(96%) sepia(42%) saturate(7082%) hue-rotate(84deg) brightness(105%) contrast(99%); */

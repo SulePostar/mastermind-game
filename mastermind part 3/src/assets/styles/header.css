@@ -1,0 +1,29 @@
+.header {
+  grid-area: Header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px 0;
+  background: var(--light);
+  color: var(--white);
+  border-bottom: 1px solid var(--black);
+  z-index: 200;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.mode {
+  width: 90px;
+  padding: 0.5rem;
+  text-align: right;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  border-radius: 50%;
+}

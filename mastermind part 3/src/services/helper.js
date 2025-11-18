@@ -1,16 +1,18 @@
-import { COLORS, MAX_PEGS } from '@src/config';
+import { COLORS, MAX_PEGS, MAX_ROWS } from "@src/config.js";
+
+export const makeRows = () => {
+  let rows = [];
+  let row = [];
+  for (let i = 0; i < MAX_PEGS; i++) row.push('X');
+  for (let i = 0; i < MAX_ROWS; i++) rows.push([row]);
+  return rows;
+}
 
 export const makeSecret = () => {
   let secret = [];
-  const colorsCopy = [...COLORS];
-  for(let i=0; i<MAX_PEGS; i++) {
-    const randIndex = Math.floor(Math.random() * colorsCopy.length);
-    secret.push(colorsCopy[randIndex]);
-    colorsCopy.splice(randIndex, 1);
+  for (let i = 0; i < MAX_PEGS; i++) {
+    const randomIndex = Math.floor(Math.random() * COLORS.length);
+    secret.push(COLORS[randomIndex]);
   }
   return secret;
-}
-
-export const makeRows = () => {
-  return Array.from({ length: 10 }, () => Array.from({ length: MAX_PEGS }, () => ''));
 }

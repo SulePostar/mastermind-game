@@ -1,13 +1,16 @@
-import React from 'react'
+import { useSelector } from 'react-redux';
 import Circle from './Circle';
 
 const Hint = ({ index }) => {
+
+  const { hints } = useSelector(state => state.game);
+  const hint = hints[index];
+
   return (
     <div className="hint">
-      <Circle />
-      <Circle />
-      <Circle />
-      <Circle />
+      {hint.map((color, index) => (
+        <Circle key={index} color={color} />
+      ))}
     </div>
   )
 }

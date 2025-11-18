@@ -1,0 +1,17 @@
+const dispatch = useDispatch();
+  const { gameStatus } = useSelector((state) => state.game);
+  
+  
+
+  const advance = () => {
+    if(activeRow < 9) {
+      setActiveRow(prev => prev + 1);
+    } else {
+      dispatch(setGameStatus('lost'));
+    }
+  }
+
+  const reset = () => {
+    setActiveRow(0);
+    dispatch(setGameStatus('ongoing'));
+  }

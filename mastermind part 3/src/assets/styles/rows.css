@@ -1,0 +1,47 @@
+.rows {
+  grid-area: Rows;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 14% 60% 20%;
+  gap: 2%;
+  height: 60px;
+  margin: 6px 0;
+  align-items: center;
+  justify-items: center;
+  font-size: 1.25rem;
+}
+
+.row.active {
+  background: var(--dark);
+  color: var(--white);
+}
+
+.row > div {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: var(--white);
+  background: var(--black);
+  width: 36px !important;
+  aspect-ratio: 1/1;
+  border-radius: 50%; 
+}
+
+.guess {
+  display: flex;
+  gap: 8px;
+}
+
+.hint {
+  display: flex;
+  gap: 4px;
+}

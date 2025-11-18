@@ -15,10 +15,11 @@ export default defineConfig({
   resolve: {
     alias: {
       '@src': '/src',
-      '@assets': '/src/assets',
+      '@images': '/src/assets/images',
+      '@styles': '/src/assets/styles',
       '@components': '/src/components',
-      '@store': '/src/store',
       '@services': '/src/services',
+      '@store': '/src/store'
     },
   },
 })

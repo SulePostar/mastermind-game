@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { makeRows, makeSecret } from '@services/helper';
+import { makeSecret } from '@services/helper';
 
 const initialState = {
   gameStatus: 'ongoing', // 'ongoing', 'won', 'lost'
@@ -15,13 +15,11 @@ const gameSlice = createSlice({
   initialState,
   reducers: {
     resetGame: () => initialState,
-    setGameStatus(state, action) {
-      state.gameStatus = action.payload;
-      return state;
-    }
-  }
-});
+    setGameStatus: (state, action) => { return { ...state, gameStatus: action.payload }},
+    setActiveColor: (state, action) => { return { ...state, activeColor: action.payload }},
+    setActiveRow: (state, action) => { return { ...state, activeRow: action.payload }},
+  }});
 
 const { actions, reducer } = gameSlice;
-export const { resetGame, setGameStatus } = actions;
+export const { resetGame, setGameStatus, setActiveColor, setActiveRow } = actions;
 export default reducer;

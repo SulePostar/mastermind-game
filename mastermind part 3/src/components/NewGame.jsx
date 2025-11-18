@@ -1,16 +1,15 @@
 import { useDispatch } from 'react-redux';
-import { resetGame } from '@store/gameSlice';
+import { setNewGame } from '@store/gameSlice';
 
 const NewGame = () => {
-
   const dispatch = useDispatch();
 
-  const reset = () => {
-    dispatch(resetGame())
-  }
-
+  const onClick = () => {
+    dispatch(setNewGame());
+  };
+  
   return (
-    <button onClick={reset}>New Game</button>
+    <button className="button" onClick={onClick}>New Game</button>
   )
 }
 

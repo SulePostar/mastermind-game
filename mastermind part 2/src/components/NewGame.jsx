@@ -1,16 +1,10 @@
 import { useDispatch } from 'react-redux';
 import { resetGame } from '@store/gameSlice';
 
-const NewGame = () => {
+export default () => {
   const dispatch = useDispatch();
-
-  const onClick = () => {
-    dispatch(resetGame());
-  };
   
   return (
-    <button onClick={onClick}>New Game</button>
+    <button onClick={dispatch(resetGame())}>New Game</button>
   )
 }
-
-export default NewGame;

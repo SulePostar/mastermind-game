@@ -1,9 +1,11 @@
-const GameEnd = ({ status }) => {
+import { useSelector } from 'react-redux';
+
+export default () => {
+  const { gameStatus } = useSelector(state => state.game);
+
   return (
-    (status === "ongoing") ?
+    (gameStatus === "ongoing") ?
       null :
       <div className="game-end">Game End</div>
   );
 }
-
-export default GameEnd;

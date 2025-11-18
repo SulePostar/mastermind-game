@@ -1,6 +1,10 @@
-const Circle = ({ color='transparent', active=false, onSelect }) => {
-  
-  const onClick = () => onSelect(color);
+const Circle = ({ color='transparent', active=false, onSelect }) => { 
+
+  const onClick = () => {
+    if (onSelect) {
+      onSelect();
+    }
+  }
   
   return (
     <div 
@@ -8,5 +12,4 @@ const Circle = ({ color='transparent', active=false, onSelect }) => {
       className={`circle ${color} pointer ${active ? "active" : ""}`} />
   )
 }
-
 export default Circle;

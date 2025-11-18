@@ -1,21 +1,17 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { setActiveRow, setGameStatus } from '@store/gameSlice';
+import { useSelector, useDispatch } from "react-redux";
+import { setActiveRow } from "@src/store/gameSlice";
 
 const Check = () => {
 
   const dispatch = useDispatch();
-  const { activeRow } = useSelector(state => state.game);
+  const { activeRow } = useSelector((state) => state.game);
 
-  const advance = () => {
-    if (activeRow < 9) {
-      dispatch(setActiveRow(activeRow + 1));
-    } else {
-      dispatch(setGameStatus('lost'));
-    }
-  }
-
+  const onClick = () => {
+    dispatch(setActiveRow(activeRow + 1));
+  };
+  
   return (
-    <button onClick={advance}>Check</button>
+    <button className="button" onClick={onClick}>Check</button>
   )
 }
 

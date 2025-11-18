@@ -1,0 +1,19 @@
+.button {
+  border: none;
+  border-radius: 6px;
+  background: none;
+  cursor: pointer;
+  padding: 0.8rem;
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.button:hover {
+  background: var(--dark);
+}
+
+.button:disabled {
+  background: var(--light);
+  color: var(--dark);
+  cursor: not-allowed;
+}

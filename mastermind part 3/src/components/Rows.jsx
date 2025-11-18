@@ -1,17 +1,12 @@
-import { useSelector } from "react-redux";
+import { MAX_ROWS } from "@src/config";
 import Row from "./Row";
 
-const Rows = () => {
-  
-  const activeRow = useSelector(state => state.game.activeRow);
-
-  return (
-    <div className='rows'>
-      {new Array(10).fill('').map((_, i) => (
-        <Row key={i} active={i === activeRow} />
-      ))}
-    </div>
-  )
-}
+const Rows = () => (
+  <div className='rows'>
+    {new Array(MAX_ROWS).fill('').map((_, index) => (
+      <Row key={index} index={index} />
+    ))}
+  </div>
+);
 
 export default Rows;

@@ -1,0 +1,30 @@
+.game {
+  display: grid;
+  position: relative;
+  width: 600px;
+  margin: 0 auto;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: auto;
+  background: var(--beige);
+  grid-template-areas: 
+    'Header Header'
+    'Rows Colors'
+    'Footer Footer';
+}
+
+.game-end {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--light);
+  /* opacity: 0.75; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: var(--white);
+  z-index: 100;
+}

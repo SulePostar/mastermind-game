@@ -1,0 +1,10 @@
+.footer {
+  grid-area: Footer;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: var(--light);
+  padding: 10px 15px;
+  border-top: 1px solid var(--black);
+  z-index: 200;
+}
